@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-    <title><?php echo $title; ?></title>
-</head>
-<body>
-
 <div id="container">
+	<div calss="row">
+	<div class="col-md-8 col-md-offset-2">
 <?php foreach($articles as $row) { ?>
-    <h1> 标题：<?php echo $row['title']; ?> </h1>
+    <h1> 标题：<?php echo $row['title']; ?></h1>
     <div> 
-        作者：无名 时间：2014.1.24
+	作者: <?php echo $row['author'];?> 时间：<?php echo date("Y-m-d H:i:s", $row['post_date']);?>
     </div>
     <br />
     <div>
-        这里是内容
-        这里是内容
+		<?php echo $row['content']; ?>
     </div>
     <br />
     <div>
@@ -23,8 +16,6 @@
     </div>
     <br />
 <?php }?>
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+	</div>
+	</div>
 </div>
-
-</body>
-</html>
