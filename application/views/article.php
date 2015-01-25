@@ -7,7 +7,8 @@
 <body>
 
 <div id="container">
-    <h1> 标题：<?php echo $title; ?> </h1>
+<?php foreach($articles as $row) { ?>
+    <h1> 标题：<?php echo $row['title']; ?> </h1>
     <div> 
         作者：无名 时间：2014.1.24
     </div>
@@ -21,6 +22,7 @@
         tags: hello world! 
     </div>
     <br />
+<?php }?>
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>
 
